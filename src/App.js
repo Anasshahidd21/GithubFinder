@@ -1,22 +1,25 @@
 import React from "react";
 import "./App.css";
+import Users from "./components/users";
 
 function App() {
+  const user = [
+    {
+      username: "anas",
+      location: "www.facebook.com",
+    },
+    {
+      username: "shahid",
+      location: "www.facebook123.com",
+    },
+    {
+      username: "saad",
+      location: "www.gmail.com",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Users users={user} />
     </div>
   );
 }
